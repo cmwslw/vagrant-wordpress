@@ -2,10 +2,10 @@ Vagrant::Config.run do |config|
   config.vm.define :wpvm do |wp_config|
 
     # Box
-    wp_config.vm.box = "precise32"
+    wp_config.vm.box = "ubuntu-12.04-precise64"
 
     # Box URL
-    wp_config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+    wp_config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
     # Access via IP.
     # config.vm.network :hostonly, "192.168.33.10"
@@ -14,7 +14,7 @@ Vagrant::Config.run do |config|
     wp_config.vm.share_folder "v-data", "www", "data", :owner => "www-data", :group => "www-data"
 
     # Ports
-    wp_config.vm.forward_port 80, 8080
+    wp_config.vm.forward_port 80, 8081
 
     # Chef solo
     wp_config.vm.provision :chef_solo do |chef|
@@ -35,9 +35,9 @@ Vagrant::Config.run do |config|
           "server_debian_password" => "vagrant"
         },
         "wordpress" => {
-          "dir" => "/home/vagrant/www",
-          "url" => "http://br.wordpress.org/wordpress-3.5-pt_BR.tar.gz",
-          "lang" => "pt_BR",
+          "dir" => "/var/www",
+          "url" => "http://wordpress.org/wordpress-3.5.1.tar.gz",
+          "lang" => "en_US",
           "debug" => "false",
           "db" => {
             "database" => "wordpressdb",
