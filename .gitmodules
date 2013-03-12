@@ -28,3 +28,6 @@
 [submodule "cookbooks/phpmyadmin"]
 	path = cookbooks/phpmyadmin
 	url = git@github.com:Agiley/chef-phpmyadmin.git
+[submodule "cookbooks/wordpress"]
+	path = cookbooks/wordpress
+	url = git@github.com:adamfeuer/wordpress.git
