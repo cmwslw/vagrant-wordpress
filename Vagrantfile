@@ -2,16 +2,16 @@ Vagrant::Config.run do |config|
   config.vm.define :wpvm do |wp_config|
 
     # Box
-    wp_config.vm.box = "ubuntu-12.04-precise64"
+    wp_config.vm.box = "precise32"
 
     # Box URL
-    wp_config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    wp_config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
     # Access via IP.
     # config.vm.network :hostonly, "192.168.33.10"
 
     # Shared folder
-    wp_config.vm.share_folder "v-data", "www", "data", :owner => "www-data", :group => "www-data"
+    wp_config.vm.share_folder "v-data", "/var/www", "./data", :owner => "www-data", :group => "www-data"
 
     # Ports
     wp_config.vm.forward_port 80, 8081

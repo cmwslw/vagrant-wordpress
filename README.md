@@ -35,9 +35,9 @@ See the configurations that are possible via the Vagrantfile.
 ### WordPress config: ###
 
     "wordpress" => {
-      "dir" => "/home/vagrant/www",
-      "url" => "http://br.wordpress.org/wordpress-3.5-pt_BR.tar.gz",
-      "lang" => "pt_BR",
+      "dir" => "/var/www",
+      "url" => "http://wordpress.org/wordpress-3.5.1.tar.gz",
+      "lang" => "en_US",
       "debug" => "false",
       "db" => {
         "database" => "wordpressdb",
@@ -93,8 +93,6 @@ Cookbooks by [Opscode Public Cookbooks](https://github.com/opscode-cookbooks/)
         subversion/
         vim/
         wordpress/
-
-WordPress custom cookbook: <https://github.com/claudiosmweb/wordpress-cookbook/>
 
 ## License: ##
 
